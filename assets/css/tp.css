@@ -91,15 +91,6 @@ a {
   margin-right: 25px;
 }
 
-.main-category__wrap a.three-column {
-  width: calc((100% / 3) - (25px * 2 / 3));
-  margin-top: 25px;
-}
-
-.main-category__wrap a.three-column:not(:last-child) {
-  margin-right: 25px;
-}
-
 .primary {
   margin-left: 25px;
   margin-right: 25px;
@@ -288,11 +279,4 @@ a {
 .slick-next {
   right: -4px;
 }
-
-.test {
-  width: 80%;
-  height: 500px;
-  background-image: url(../../../../Desktop/dome.png);
-  background-blend-mode: multiply;
-}
-/*# sourceMappingURL=techparts.css.map */
+/*# sourceMappingURL=tp.css.map */

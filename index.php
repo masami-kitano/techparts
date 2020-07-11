@@ -10,9 +10,6 @@ Template Name: index
             <div class="main-category__wrap">
                 <a href="" class="two-column"></a>
                 <a href="" class="two-column"></a>
-                <a href="" class="three-column"></a>
-                <a href="" class="three-column"></a>
-                <a href="" class="three-column"></a>
             </div>
         </div>
         <div class="primary">

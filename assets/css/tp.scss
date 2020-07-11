@@ -95,14 +95,6 @@ a {
                     margin-right: $space;
                 }
             }
-
-            &.three-column {
-                width: $three_column;
-                margin-top: $space;
-                &:not(:last-child) {
-                    margin-right: $space;
-                }
-            }
         }
     }
 }
