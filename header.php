@@ -20,12 +20,7 @@
                 <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="header__nav">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Topics</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+            <?php wp_nav_menu(); ?>
             </div>
         </div>
     </section>
