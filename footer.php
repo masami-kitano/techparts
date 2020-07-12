@@ -1,7 +1,7 @@
 <section class="footer">
        <div class="footer__wrap">
             <div class="footer__logo">
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_black.png" alt="TechPartsのロゴ"></a>
+                <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_black.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="footer__social">
                 <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp_facebook_logo.png" alt="TechPartsのFacebook"></a>

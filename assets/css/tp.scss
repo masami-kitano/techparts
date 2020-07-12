@@ -163,6 +163,7 @@ a {
 }
 
 .post-item {
+    position: relative;
     display: block;
     margin-bottom: $space;
     width: 50%;
@@ -179,8 +180,46 @@ a {
 
     &__content {
         width: $content_w;
+        padding: 15px 20px;
         height: 250px;
-        background-color: #f5f5f5;
+        background-color: #f7f7f7;
+
+        &__meta {
+            .post-item-cat {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 3px 10px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 14px;
+                color: #fff;
+            }
+
+            time.post-item-published {
+                position: absolute;
+                bottom: 10px;
+                display: block;
+                width: calc(100% - 65px);
+                font-size: 11px;
+                color: #8c8c8c;
+                text-align: center;
+            }
+        }
+
+        .post-item-title {
+            padding: 10px 5px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .post-item-excerpt {
+            p {
+                color: #8c8c8c;
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -191,7 +230,7 @@ a {
     width: $three_column;
 
     .widget {
-        border-top: 1px solid #333;
+        border-top: 1px solid #a9a9a9;
         padding: $space 0 $double_s;
 
         &-title {
@@ -274,6 +313,34 @@ a {
                     img {
                         height: auto;
                     }
+                }
+            }
+        }
+
+        form.searchform {
+            position: relative;
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                line-height: 1;
+                border: 1px solid #dde2e8;
+                border-radius: 3px;
+                transition: .4s ease-in-out;
+            }
+
+            button {
+                cursor: pointer;
+                position: absolute;
+                top: 27%;
+                right: 10px;
+                border: none;
+                background: none;
+
+                .fa-search {
+                    color: #d0d0d0;
+                    font-size: 20px;
                 }
             }
         }

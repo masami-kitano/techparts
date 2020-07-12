@@ -17,7 +17,7 @@
     <section class="header">
         <div class="header__wrap">
             <div class="header__logo">
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
+                <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="header__nav">
             <?php wp_nav_menu(); ?>

@@ -1,39 +1,17 @@
-<?php
-/*
-Template Name: index
-*/
-?>
 <?php get_header(); ?>
 <section class="main">
-        <div class="main-category">
-            <div class="tp-title">Main Category</div>
-            <div class="main-category__wrap">
-                <a href="" class="two-column"></a>
-                <a href="" class="two-column"></a>
-            </div>
-        </div>
-        <div class="primary">
-            <div class="inner">
-                <div class="topics">
-                    <div class="tp-title">Topics</div>
-                    <div class="topics__wrap slick">
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
-                    </div>
+    <div class="primary">
+        <div class="inner">
+            <div class="post">
+                <?php if ( function_exists( 'bcn_display' ) ) : ?>
+                <!-- breadcrumb -->
+                <div class="breadcrumb">
+                <?php bcn_display(); ?>
                 </div>
-                <div class="post">
-					<div class="tp-title">New Post</div>
-					<?php
+                <!-- /breadcrumb -->
+                <?php endif; ?>
+
+                <?php
 					//記事があればpost_wrapブロック以下を表示
 					if (have_posts() ) : ?>
                     <div class="post__wrap">
@@ -92,11 +70,10 @@ Template Name: index
 					);
 					?>
 					</div><!-- /pagenation -->
-					<?php endif; ?>
-					
-                </div>
+                <?php endif; ?>
             </div>
-            <?php get_sidebar(); ?>
         </div>
-    </section>
+        <?php get_sidebar(); ?>
+    </div>
+</section>
 <?php get_footer(); ?>

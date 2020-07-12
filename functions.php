@@ -103,3 +103,56 @@ function tp_widgets_init() {
 	);	
 }
 add_action( 'widgets_init', 'tp_widgets_init' );
+
+// カテゴリー・タグ・アーカイブ・検索結果かどうかの判定処理
+function current_archive() {
+	if (is_category()) {
+		echo "Category";
+	}
+	elseif (is_tag()){
+		echo "Tag";
+	}
+	elseif (is_post_type_archive()){
+		echo "Archive";
+	}
+	elseif (is_date()){
+		$date = get_the_time('Y年n月');
+		echo $date;
+	}
+	elseif (is_search()){
+		echo "検索結果";
+	}
+	elseif (s_404()){
+		echo "「404」ページが見つかりません";
+	}
+}
+
+// the_archive_title 余計な文字を削除 
+add_filter( 'get_the_archive_title', function ($title) {
+    if (is_category()) {
+        $title = single_cat_title('',false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('',false);
+	} elseif (is_tax()) {
+	    $title = single_term_title('',false);
+	} elseif (is_post_type_archive() ){
+		$title = post_type_archive_title('',false);
+	} elseif (is_date()) {
+	    $title = get_the_time('Y年n月');
+	} elseif (is_search()) {
+	    $title = '検索結果：'.esc_html( get_search_query(false) );
+	} elseif (is_404()) {
+	    $title = '「404」ページが見つかりません';
+	} else {
+
+	}
+    return $title;
+});
+
+// カテゴリーのslugを取得
+function get_category_slug() {
+	$category = get_the_category();
+	$slug = $category[0]->category_nicename;  
+
+	return $slug;
+}
