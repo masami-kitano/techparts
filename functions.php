@@ -92,9 +92,9 @@ function tp_enqueue_scripts() {
 function tp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Blog Sidebar', 'tp' ),
+			'name'          => __( 'tp Sidebar', 'tp' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'techparts' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',

@@ -49,7 +49,33 @@ a {
 }
 
 .header__nav ul li a {
+  position: relative;
+  display: inline-block;
   color: #fff;
+  text-decoration: none;
+}
+
+.header__nav ul li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.header__nav ul li a:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .main {
@@ -143,19 +169,25 @@ a {
 }
 
 .post-item {
+  display: block;
   margin-bottom: 25px;
   width: 50%;
 }
 
 .post-item__img {
   width: calc(100% - 25px);
-  height: 100px;
+  height: 200px;
   background-color: #e5e5e5;
+}
+
+.post-item__img img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .post-item__content {
   width: calc(100% - 25px);
-  height: 150px;
+  height: 250px;
   background-color: #f5f5f5;
 }
 
@@ -165,15 +197,54 @@ a {
   width: calc((100% / 3) - (25px * 2 / 3));
 }
 
-.sidebar__wrap {
+.sidebar .widget {
   border-top: 1px solid #333;
   padding: 25px 0 50px;
 }
 
-.sidebar-item__title {
+.sidebar .widget-title {
   margin-bottom: 25px;
   text-align: center;
   font-size: 15px;
+}
+
+.sidebar .widget_categories ul {
+  margin: 0 auto;
+  width: calc(100% - 50px);
+}
+
+.sidebar .widget_categories ul li {
+  margin-bottom: 12.5px;
+}
+
+.sidebar .widget_categories ul li a span {
+  padding-right: 25px;
+}
+
+.sidebar .widget_categories ul li a span img {
+  height: auto;
+}
+
+.sidebar .widget .tagcloud {
+  margin: 0 auto;
+  width: calc(100% - 50px);
+}
+
+.sidebar .widget .tagcloud a {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #B6C0C7;
+  color: #fff;
+  padding: 2px 12.5px;
+  background-color: #B6C0C7;
+  border-radius: 13px;
+  font-size: 13px !important;
+}
+
+.sidebar .widget .tagcloud a:hover {
+  background-color: #fff;
+  color: #B6C0C7;
 }
 
 .sidebar-item__content {
@@ -198,20 +269,6 @@ a {
 
 .sidebar-item__content p.item-txt {
   font-size: 13px;
-}
-
-.sidebar-item__content p.tag {
-  display: inline-block;
-  margin-right: 12.5px;
-  margin-bottom: 12.5px;
-  padding: 2px 12.5px;
-  background-color: #B6C0C7;
-  border-radius: 13px;
-  font-size: 15px;
-}
-
-.sidebar-item__content p.tag a {
-  color: #fff;
 }
 
 .sidebar-item__content p.category {

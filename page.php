@@ -1,38 +1,39 @@
 <?php get_header(); ?>
-        <div id="main" class="container">
-            <div class="news-container">
-                <div id="posts">
+<section class="main">
+    <div class="primary">
+        <div class="inner">
+            <div class="page">
 
-                    <?php
-                    if (have_posts()) :
-                        while (have_posts()) :
-                            the_post();
-                    ?>
+                <?php
+                if (have_posts()) :
+                    while (have_posts()) :
+                        the_post();
+                ?>
 
-                    <div class="post">
-                        <div class="post-header">
-                            <h2>
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h2>
-                        </div>
-                        <div class="post-content">
-                            <?php the_content(); ?>
-                        </div>
-                    </div><!-- /post -->
+                <div class="page">
+                    <div class="page-header">
+                        <h2>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </h2>
+                    </div>
+                    <div class="page-content">
+                        <?php the_content(); ?>
+                    </div>
+                </div>
+                <?php
+                    endwhile;
+                else:
+                ?>
 
-                    <?php
-                        endwhile;
-                    else:
-                    ?>
+                <p>ページはありません！</p>
 
-                    <p>ページはありません！</p>
+                <?php
+                endif;
+                ?>
 
-                    <?php
-                    endif;
-                    ?>
-
-                </div><!-- /posts -->
-                <?php get_sidebar(); ?>
             </div>
-        </div><!-- /main -->
+        </div>
+    </div>
+    <?php get_sidebar(); ?>
+</section>
 <?php get_footer(); ?>
