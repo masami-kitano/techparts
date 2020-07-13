@@ -1,32 +1,20 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main main-404" role="main">
-
-			<section class="error-404 not-found">
+<section class="main">
+	<div class="primary">
+		<div class="inner">
+			<div class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title">404</h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p>ページが見つかりません。</p>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+				</header>
+				<p>ページが見つかりません。</p>
+				<div class="return_top">
+					<a href="<?php echo home_url( '/', 'https' ); ?>">トップへ戻る</a>
+				</div>
+			</div>
+		</div>
+		<?php get_sidebar(); ?>
+	</div>
+</section>
 
-<?php
-get_footer();
+<?php get_footer(); ?>

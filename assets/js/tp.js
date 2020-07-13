@@ -9,6 +9,11 @@ $(function(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        responsive: [{
+            breakpoint: 599,
+            settings: { 
+              slidesToShow: 1,
+            }
+          }]
+        });
     });
-
-  });

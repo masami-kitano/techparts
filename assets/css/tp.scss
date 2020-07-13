@@ -6,6 +6,21 @@ $double_s: $space * 2;
 $half_s: $space / 2;
 $two_column: calc(50% - #{$space} / 2);
 $three_column: calc((100% / 3) - (#{$space} * 2 / 3));
+
+// レスポンシブ 
+$tb: 979px;
+@mixin tb{
+    @media (max-width: ($tb)) {
+        @content;
+    }
+}
+
+$sp: 599px;
+@mixin sp{
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
  
 // 共通処理
 @mixin main_w {
@@ -115,6 +130,33 @@ a {
                     margin-right: $space;
                 }
             }
+
+            &.three-column {
+                width: $three_column;
+                &:not(:last-child) {
+                    margin-right: $space;
+                }
+            }
+
+            @include sp {
+                margin-bottom: $space;
+
+                &.two-column {
+                    width: 100%;
+    
+                    &:first-child {
+                        margin-right: 0;
+                    }
+                }
+
+                &.three-column {
+                    width: 100%;
+
+                    &:not(:last-child) {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -122,11 +164,16 @@ a {
 .primary {
     @include main_w;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .inner {
     margin-top: $double_s;
     width: calc(100% - (#{$three_column} + #{$space}));
+
+    @include tb {
+        width: 100%;
+    }
 }
 
 .topics {
@@ -152,6 +199,18 @@ a {
     }
 }
 
+.breadcrumb {
+    font-size: 12px;
+
+    a {
+        color: #8c8c8c;
+
+         &:hover {
+             opacity: 0.7;
+         }
+    }
+}
+
 .post {
     margin-bottom: $space;
 
@@ -167,6 +226,11 @@ a {
     display: block;
     margin-bottom: $space;
     width: 50%;
+
+    @include sp {
+        width: 100%;
+    }
+    
     &__img {
         width: $content_w;
         height: 200px;
@@ -189,11 +253,33 @@ a {
                 position: absolute;
                 top: 0;
                 left: 0;
-                padding: 3px 10px;
+                padding: 5px 20px;
                 text-align: center;
                 font-weight: 600;
                 font-size: 14px;
                 color: #fff;
+
+                span.cat-folder-icon {
+                    padding-right: 5px;
+                }
+            }
+
+            &.category-programming {
+                .post-item-cat {
+                    background-color: #096fc8;
+                }
+            }
+
+            &.category-design {
+                .post-item-cat {
+                    background-color: #db8c6c;
+                }
+            }
+
+            &.category-direction {
+                .post-item-cat {
+                    background-color: #0f8155;
+                }
             }
 
             time.post-item-published {
@@ -228,6 +314,15 @@ a {
     margin-top: $double_s;
     margin-left: auto;
     width: $three_column;
+
+    @include tb {
+        width: 70%;
+        margin-right: auto;
+    }
+
+    @include sp {
+        width: 100%;
+    }
 
     .widget {
         border-top: 1px solid #a9a9a9;
@@ -336,7 +431,7 @@ a {
                 top: 27%;
                 right: 10px;
                 border: none;
-                background: none;
+                background: #fff;
 
                 .fa-search {
                     color: #d0d0d0;
@@ -399,6 +494,72 @@ a {
 .slick-next {
     right: -4px
 }
+
+// single.php
+
+.post {
+    &__header {
+        margin-bottom: 30px;
+        
+        &__title {
+            padding: 20px 0;
+            font-size: 1.7em;
+            line-height: 1.4;
+        }
+
+        &__meta {
+            time {
+                color: #8c8c8c;
+                font-size: 14px;
+            }
+        }
+
+        &__label {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+
+            a {
+                padding: .6em 1em;
+                border-radius: 2px;
+                font-size: 12px;
+
+                &.category-programming {
+                    border: 1px solid #096fc8;
+                    color: #096fc8;
+
+                    &:hover {
+                        color: #fff;
+                        background: #096fc8;
+                    }
+                }
+
+                &.category-design {
+                    border: 1px solid #db8c6c;
+                    color: #db8c6c;
+
+                    &:hover {
+                        color: #fff;
+                        background: #db8c6c;
+                    }
+                }
+
+                &.category-direction {
+                    border: 1px solid #0f8155;
+                    color: #0f8155;
+
+                    &:hover {
+                        color: #fff;
+                        background: #0f8155;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// single.php end
 
 
 

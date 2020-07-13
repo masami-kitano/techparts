@@ -32,12 +32,12 @@
 								?>
 							</div>
                             <div class="post-item__content">
-								<div class="post-item__content__meta">
+								<div class="post-item__content__meta category-<?php echo get_category_slug() ?>">
 								<?php
 								// カテゴリー１つ目の名前を表示
 								$category = get_the_category();
 								if ($category[0] ) {
-									echo '<div class="post-item-cat">' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
+									echo '<div class="post-item-cat"><span class="cat-folder-icon"><i class="far fa-folder"></i></span>' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
 								}
 								?>
 								</div>
