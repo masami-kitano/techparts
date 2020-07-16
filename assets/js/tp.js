@@ -1,4 +1,22 @@
-$(function(){
+(function(){
+    if(!window.jQuery) return;
+    var $ = window.jQuery.noConflict();
+
+    function toggleNav() {
+        var body_area = $('body');
+        var hamburger = $('#hamburger');
+        var blackBg = $('#black-bg');
+        
+        hamburger.on('click', function() {
+            body_area.toggleClass('nav-open');
+        });
+        
+        blackBg.on('click', function() {
+            body_area.removeClass('nav-open');
+        });
+    }
+    toggleNav(); 
+
     $(document).ready(function()  {
         $('.topics__wrap').fadeIn();
     });
@@ -12,8 +30,8 @@ $(function(){
         responsive: [{
             breakpoint: 599,
             settings: { 
-              slidesToShow: 1,
+                slidesToShow: 1,
             }
-          }]
-        });
+        }]
     });
+})();

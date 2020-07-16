@@ -18,18 +18,26 @@ Template Name: index
                 <div class="topics">
                     <div class="tp-title">Topics</div>
                     <div class="topics__wrap slick">
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
-                        <div class="topics-item">
-                            <div class="topics-item__img"></div>
-                            <div class="topics-item__title">タイトル</div>
-                        </div>
+						<?php $the_query = new WP_Query(topics_posts());
+						if ($the_query->have_posts()) : ?>
+							<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+								<a href="<?php the_permalink(); ?>" class="topics-item">
+									<div class="topics-item__img">
+										<?php
+											if (has_post_thumbnail() ) {
+												the_post_thumbnail('large');
+											} else {
+												echo '<img src="' . esc_url(get_template_directory_uri()) . '/assets/img/noimg.png" alt="TechPartsデフォルト画像">';
+											}
+										?>
+									</div>
+									<div class="topics-item__title">
+										<?php the_title(); ?>
+									</div>
+								</a>
+							<?php endwhile; ?>
+						<?php endif; 
+						wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <div class="post">
@@ -80,18 +88,18 @@ Template Name: index
 					<?php if (paginate_links() ) : //ページが1ページ以上あれば以下を表示 ?>
 					<!-- pagenation -->
 					<div class="pagenation">
-					<?php
-					echo
-					paginate_links(
-					array(
-					'end_size' => 0,
-					'mid_size' => 1,
-					'prev_next' => true,
-					'prev_text' => '<i class="fas fa-angle-left"></i>',
-					'next_text' => '<i class="fas fa-angle-right"></i>',
-					)
-					);
-					?>
+						<?php
+						echo
+						paginate_links(
+						array(
+						'end_size' => 0,
+						'mid_size' => 1,
+						'prev_next' => true,
+						'prev_text' => '<i class="fas fa-angle-left"></i>',
+						'next_text' => '<i class="fas fa-angle-right"></i>',
+						)
+						);
+						?>
 					</div><!-- /pagenation -->
 					<?php endif; ?>
 					

@@ -1,5 +1,8 @@
 <?php
 
+// ツールバーの削除
+add_filter('show_admin_bar', '__return_false');
+
 $tmp_path_arr = array(
 	'temp_uri' => get_template_directory_uri()
 );
@@ -70,7 +73,7 @@ function tp_enqueue_scripts() {
 	
 	// if( is_front_page() ) wp_enqueue_script( 
 	// 	'home-script', 
-	// 	get_template_directory_uri() . '/assets/js/cp_home.js',
+	// 	get_template_directory_uri() . '/assets/js/.js',
 	// 	array( 'jquery' ),
 	// 	false,
 	//   	true
@@ -78,7 +81,7 @@ function tp_enqueue_scripts() {
 
 	// if ( is_page( 'menu' ) ) wp_enqueue_script( 
 	// 'menu-script', 
-	// get_template_directory_uri() . '/assets/js/cp_menu.js',
+	// get_template_directory_uri() . '/assets/js/.js',
 	// array( 'jquery' ),
 	// false,
 	// true
@@ -103,6 +106,15 @@ function tp_widgets_init() {
 	);	
 }
 add_action( 'widgets_init', 'tp_widgets_init' );
+
+// トップページのTopics覧の投稿を任意で取得
+function topics_posts() {
+	$args = array(
+		'post_type' => 'post', 
+		'post__in' => array(1, 11, 14),
+	); 
+	return $args;
+}
 
 // カテゴリー・タグ・アーカイブ・検索結果かどうかの判定処理
 function current_archive() {
