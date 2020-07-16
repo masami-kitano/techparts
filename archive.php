@@ -9,11 +9,11 @@
 			<!-- /breadcrumb -->
 			<div class="post">
 				<div class="archive-header m_description">
-					<div class="archive-lead">
+					<div class="archive-header__lead">
 						<?php current_archive() ?>
 					</div>
-					<h1 class="archive-title m_category"><?php the_archive_title(); //一覧ページ名を表示 ?></h1>
-					<div class="archive-description">
+					<h1 class="archive-header__title m_category"><?php the_archive_title(); //一覧ページ名を表示 ?></h1>
+					<div class="archive-header__description">
 						<p><?php the_archive_description(); ?></p>
 					</div>
 				</div>

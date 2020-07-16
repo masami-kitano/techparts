@@ -6,6 +6,11 @@ $double_s: $space * 2;
 $half_s: $space / 2;
 $two_column: calc(50% - #{$space} / 2);
 $three_column: calc((100% / 3) - (#{$space} * 2 / 3));
+$category-colors:(
+    'category-programming':#096fc8, 
+    'category-design':#db8c6c,
+    'category-direction':#0f8155,
+);
 
 // レスポンシブ 
 $tb: 979px;
@@ -388,21 +393,11 @@ a {
                 }
             }
 
-            &.category-programming {
-                .post-item-cat {
-                    background-color: #096fc8;
-                }
-            }
-
-            &.category-design {
-                .post-item-cat {
-                    background-color: #db8c6c;
-                }
-            }
-
-            &.category-direction {
-                .post-item-cat {
-                    background-color: #0f8155;
+            @each $category , $color in $category-colors {
+                &.#{$category} {
+                    .post-item-cat {
+                        background-color: $color;
+                    }
                 }
             }
 
@@ -464,6 +459,13 @@ a {
 
                 li {
                     margin-bottom: $half_s;
+
+                    &:before {
+                        content: '';
+                        width: 50px;
+                        height: 50px;
+                        background: #333;
+                    }
                     a {
                         span {
                             padding-right: $space;
@@ -691,6 +693,23 @@ a {
 }
 
 // single.php end
+
+// archive.php
+
+.archive-header {
+    padding: 15px 0 20px;
+
+    &__lead {
+        padding-bottom: 0;
+        font-size: 12px;
+    }
+
+    &__title {
+        font-size: 32px;
+    }
+}
+
+// archive.php end
 
 
 

@@ -36,7 +36,7 @@
                             <?php if ( get_the_modified_time( 'Y-m-d' ) !== get_the_time( 'Y-m-d' ) ) : ?>
                                 <time class="post-updated" datetime="<?php the_modified_time( 'c' ); ?>"><i class="fas fa-history"></i> <?php the_modified_time( 'Y/n/j' ); ?></time>
                             <?php endif; ?>
-                            <time class="post-published" datetime="<?php the_time( 'c' ); ?>">（公開日 <?php the_time( 'Y/n/j' ); ?>）</time>
+                                <time class="post-published" datetime="<?php the_time( 'c' ); ?>">(公開日 <?php the_time( 'Y/n/j' ); ?>)</time>
                         </div>
 
                         <?php
