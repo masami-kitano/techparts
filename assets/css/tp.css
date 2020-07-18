@@ -624,6 +624,7 @@ a {
 .footer__social a {
   display: inline-block;
   padding-right: 12.5px;
+  font-size: 20px;
 }
 
 .footer__copy {
