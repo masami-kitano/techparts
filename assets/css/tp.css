@@ -873,4 +873,36 @@ a {
 .archive-header__title {
   font-size: 32px;
 }
+
+.error-404 {
+  text-align: center;
+}
+
+.error-404 .page-header .page-title {
+  font-size: 50px;
+  color: #B6C0C7;
+}
+
+.error-404 p.not-found-txt {
+  font-size: 15px;
+  color: #B6C0C7;
+}
+
+.error-404 .return-top {
+  margin: 75px 0;
+}
+
+.error-404 .return-top a {
+  border-radius: 20px;
+  border: 2px solid #B6C0C7;
+  padding: 10px 30px;
+  background: #B6C0C7;
+  text-align: center;
+  color: #fff;
+}
+
+.error-404 .return-top a:hover {
+  background: #fff;
+  color: #B6C0C7;
+}
 /*# sourceMappingURL=tp.css.map */

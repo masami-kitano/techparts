@@ -7,8 +7,8 @@
 				<header class="page-header">
 					<h1 class="page-title">404</h1>
 				</header>
-				<p>ページが見つかりません。</p>
-				<div class="return_top">
+				<p class="not-found-txt">ページが見つかりません。</p>
+				<div class="return-top">
 					<a href="<?php echo home_url( '/', 'https' ); ?>">トップへ戻る</a>
 				</div>
 			</div>

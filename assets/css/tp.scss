@@ -850,6 +850,44 @@ a {
 
 // archive.php end
 
+// 404.php
+
+.error-404 {
+    text-align: center;
+
+    .page-header {
+        .page-title {
+            font-size: 50px;
+            color: #B6C0C7;
+        }
+    }
+
+    p.not-found-txt {
+        font-size: 15px;
+        color: #B6C0C7;
+    }
+
+    .return-top {
+        margin: 75px 0;
+
+        a {
+            border-radius: 20px;
+            border: 2px solid #B6C0C7;
+            padding: 10px 30px;
+            background: #B6C0C7;
+            text-align: center;
+            color: #fff;
+
+            &:hover {
+                background: #fff;
+                color: #B6C0C7;
+            }
+        }
+    }
+}
+
+// 404.php end
+
 
 
 
