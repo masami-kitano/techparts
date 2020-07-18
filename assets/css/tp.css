@@ -776,6 +776,10 @@ a {
   font-size: 20px;
 }
 
+.footer__social a:hover {
+  opacity: 0.6;
+}
+
 .footer__copy {
   padding-left: 25px;
 }
@@ -893,7 +897,7 @@ a {
 }
 
 .error-404 .return-top a {
-  border-radius: 20px;
+  border-radius: 25px;
   border: 2px solid #B6C0C7;
   padding: 10px 30px;
   background: #B6C0C7;
