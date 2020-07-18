@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -201,7 +202,7 @@ a {
 .main-category__wrap a {
   display: block;
   height: 100px;
-  background-color: #e5e5e5;
+  border-radius: 5px;
 }
 
 .main-category__wrap a.two-column {
@@ -214,10 +215,67 @@ a {
 
 .main-category__wrap a.three-column {
   width: calc((100% / 3) - (25px * 2 / 3));
+  text-align: center;
 }
 
 .main-category__wrap a.three-column:not(:last-child) {
   margin-right: 25px;
+}
+
+.main-category__wrap a.three-column .m-cat-icon {
+  padding-top: 16px;
+  font-size: 25px;
+}
+
+.main-category__wrap a.three-column.category-programming {
+  border: 2px solid #096fc8;
+  color: #096fc8;
+  background-color: #fff;
+}
+
+.main-category__wrap a.three-column.category-programming:hover {
+  background: #096fc8;
+  color: #fff;
+}
+
+.main-category__wrap a.three-column.category-design {
+  border: 2px solid #db8c6c;
+  color: #db8c6c;
+  background-color: #fff;
+}
+
+.main-category__wrap a.three-column.category-design:hover {
+  background: #db8c6c;
+  color: #fff;
+}
+
+.main-category__wrap a.three-column.category-direction {
+  border: 2px solid #0f8155;
+  color: #0f8155;
+  background-color: #fff;
+}
+
+.main-category__wrap a.three-column.category-direction:hover {
+  background: #0f8155;
+  color: #fff;
+}
+
+.main-category__wrap a.three-column.category-programming .m-cat-icon:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+
+.main-category__wrap a.three-column.category-design .m-cat-icon:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+
+.main-category__wrap a.three-column.category-direction .m-cat-icon:before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
 }
 
 @media (max-width: 599px) {
@@ -299,7 +357,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px 20px;
+  padding: 5px 20px 5px 30px;
   text-align: center;
   font-weight: 600;
   font-size: 14px;
@@ -322,6 +380,36 @@ a {
 
 .topics-item__img.category-direction .post-item-cat {
   background-color: #0f8155;
+}
+
+.topics-item__img.category-programming .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.topics-item__img.category-design .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.topics-item__img.category-direction .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .topics-item__title {
@@ -407,7 +495,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 5px 20px;
+  padding: 5px 20px 5px 30px;
   text-align: center;
   font-weight: 600;
   font-size: 14px;
@@ -430,6 +518,36 @@ a {
 
 .post-item__content__meta.category-direction .post-item-cat {
   background-color: #0f8155;
+}
+
+.post-item__content__meta.category-programming .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.post-item__content__meta.category-design .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.post-item__content__meta.category-direction .post-item-cat:before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .post-item__content__meta time.post-item-published {

@@ -11,6 +11,11 @@ $category-colors:(
     'category-design':#db8c6c,
     'category-direction':#0f8155,
 );
+$category-icons:(
+    'category-programming': "\f121", 
+    'category-design': "\f1fc",
+    'category-direction': "\f5eb",
+);
 
 // レスポンシブ 
 $tb: 979px;
@@ -230,7 +235,7 @@ a {
         a {
             display: block;
             height: 100px;
-            background-color: #e5e5e5;
+            border-radius: 5px;
 
             &.two-column {
                 width: $two_column;
@@ -242,8 +247,39 @@ a {
 
             &.three-column {
                 width: $three_column;
+                text-align: center;
                 &:not(:last-child) {
                     margin-right: $space;
+                }
+
+                .m-cat-icon {
+                    padding-top: 16px;
+                    font-size: 25px;
+                }
+
+                @each $category , $color in $category-colors {
+                    &.#{$category} {
+                        border: 2px solid $color; 
+                        color: $color;
+                        background-color: #fff;
+
+                        &:hover {
+                            background: $color;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                @each $category , $icon in $category-icons {
+                    &.#{$category} {
+                        .m-cat-icon {
+                            &:before {
+                                content: $icon;
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: bold;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -320,7 +356,7 @@ a {
             position: absolute;
             top: 0;
             left: 0;
-            padding: 5px 20px;
+            padding: 5px 20px 5px 30px;
             text-align: center;
             font-weight: 600;
             font-size: 14px;
@@ -337,6 +373,22 @@ a {
             &.#{$category} {
                 .post-item-cat {
                     background-color: $color;
+                }
+            }
+        }
+
+        @each $category , $icon in $category-icons {
+            &.#{$category} {
+                .post-item-cat {
+                    &:before {
+                        position: absolute;
+                        top: 9px;
+                        left: 10px;
+                        content: $icon;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: bold;
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -418,7 +470,7 @@ a {
                 position: absolute;
                 top: 0;
                 left: 0;
-                padding: 5px 20px;
+                padding: 5px 20px 5px 30px;
                 text-align: center;
                 font-weight: 600;
                 font-size: 14px;
@@ -435,6 +487,22 @@ a {
                 &.#{$category} {
                     .post-item-cat {
                         background-color: $color;
+                    }
+                }
+            }
+
+            @each $category , $icon in $category-icons {
+                &.#{$category} {
+                    .post-item-cat {
+                        &:before {
+                            position: absolute;
+                            top: 9px;
+                            left: 10px;
+                            content: $icon;
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: bold;
+                            font-size: 12px;
+                        }
                     }
                 }
             }

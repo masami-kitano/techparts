@@ -8,9 +8,18 @@ Template Name: index
         <div class="main-category">
             <div class="tp-title">Main Category</div>
             <div class="main-category__wrap">
-				<a href="" class="three-column"></a>
-                <a href="" class="three-column"></a>
-                <a href="" class="three-column"></a>
+				<a href="/category/programming/" class="three-column category-programming">
+					<h3 class="m-cat-icon"></h3>
+					<p>プログラミング</p>
+				</a>
+                <a href="/category/design/" class="three-column category-design">
+					<h3 class="m-cat-icon"></h3>
+					<p>デザイン</p>
+				</a>
+                <a href="/category/direction/" class="three-column category-direction">
+					<h3 class="m-cat-icon"></h3>
+					<p>ディレクション</p>
+				</a>
             </div>
         </div>
         <div class="primary">
@@ -34,7 +43,7 @@ Template Name: index
 										// カテゴリー１つ目の名前を表示
 										$category = get_the_category();
 										if ($category[0] ) {
-											echo '<div class="post-item-cat"><span class="cat-folder-icon"><i class="far fa-folder"></i></span>' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
+											echo '<div class="post-item-cat">' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
 										}
 										?>
 									</div>
@@ -75,7 +84,7 @@ Template Name: index
 								// カテゴリー１つ目の名前を表示
 								$category = get_the_category();
 								if ($category[0] ) {
-									echo '<div class="post-item-cat"><span class="cat-folder-icon"><i class="far fa-folder"></i></span>' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
+									echo '<div class="post-item-cat">' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
 								}
 								?>
 								</div>
