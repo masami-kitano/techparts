@@ -482,14 +482,9 @@ a {
   color: #096fc8;
 }
 
-.sidebar .widget_categories ul li.cat-item-2:before {
+.sidebar .widget_categories ul li.cat-item-3:before {
   content: "\f1fc";
   color: #db8c6c;
-}
-
-.sidebar .widget_categories ul li.cat-item-3:before {
-  content: "\f5eb";
-  color: #0f8155;
 }
 
 .sidebar .widget_categories ul li.cat-item-4:before {

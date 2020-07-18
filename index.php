@@ -15,7 +15,7 @@ Template Name: index
         </div>
         <div class="primary">
             <div class="inner">
-                <div class="topics">
+                <div id="topics" class="topics">
                     <div class="tp-title">Topics</div>
                     <div class="topics__wrap slick">
 						<?php $the_query = new WP_Query(topics_posts());
