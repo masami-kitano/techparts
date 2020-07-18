@@ -281,6 +281,7 @@ a {
   width: calc(100% - 25px);
   height: 200px;
   background-color: #e5e5e5;
+  border-radius: 5px;
 }
 
 .topics-item__img img {
@@ -290,6 +291,7 @@ a {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  border-radius: 5px;
 }
 
 .topics-item__title {
@@ -321,14 +323,18 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-left: 25px;
+  padding: 0 25px;
 }
 
 .post-item {
   position: relative;
   display: block;
   margin-bottom: 25px;
-  width: 50%;
+  width: calc(50% - 12.5px);
+}
+
+.post-item:nth-of-type(even) {
+  margin-left: auto;
 }
 
 .post-item:hover {
@@ -342,9 +348,10 @@ a {
 }
 
 .post-item__img {
-  width: calc(100% - 25px);
   height: 200px;
   background-color: #e5e5e5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .post-item__img img {
@@ -354,13 +361,16 @@ a {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .post-item__content {
-  width: calc(100% - 25px);
   padding: 15px 20px;
   height: 250px;
   background-color: #f7f7f7;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .post-item__content__meta .post-item-cat {
@@ -372,6 +382,8 @@ a {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .post-item__content__meta .post-item-cat span.cat-folder-icon {
@@ -447,14 +459,37 @@ a {
 }
 
 .sidebar .widget_categories ul li {
+  position: relative;
   margin-bottom: 12.5px;
+  padding-left: 30px;
+}
+
+.sidebar .widget_categories ul li:hover {
+  opacity: 0.6;
 }
 
 .sidebar .widget_categories ul li:before {
-  content: '';
-  width: 50px;
-  height: 50px;
-  background: #333;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  font-size: 15px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+
+.sidebar .widget_categories ul li.cat-item-1:before {
+  content: "\f121";
+  color: #096fc8;
+}
+
+.sidebar .widget_categories ul li.cat-item-2:before {
+  content: "\f1fc";
+  color: #db8c6c;
+}
+
+.sidebar .widget_categories ul li.cat-item-3:before {
+  content: "\f5eb";
+  color: #0f8155;
 }
 
 .sidebar .widget_categories ul li a span {
@@ -540,6 +575,7 @@ a {
   padding: 10px;
   font-size: 16px;
   line-height: 1;
+  vertical-align: middle;
   border: 1px solid #dde2e8;
   border-radius: 3px;
   -webkit-transition: .4s ease-in-out;

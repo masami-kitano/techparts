@@ -111,7 +111,7 @@ add_action( 'widgets_init', 'tp_widgets_init' );
 function topics_posts() {
 	$args = array(
 		'post_type' => 'post', 
-		'post__in' => array(1, 15, 17),
+		'post__in' => array(1, 5, 7, 15, 17),
 	); 
 	return $args;
 }
