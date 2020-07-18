@@ -4,9 +4,9 @@
                 <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_black.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="footer__social">
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp_facebook_logo.png" alt="TechPartsのFacebook"></a>
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp_twitter_logo.png" alt="TechPartsのTwitter"></a>
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-github-logo.png" alt="TechPartsのGitHub"></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
             </div>
             <div class="footer__copy">
                 <address>Copyright © Tech Parts All Rights Reserved.</address>

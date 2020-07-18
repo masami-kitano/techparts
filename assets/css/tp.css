@@ -492,6 +492,11 @@ a {
   color: #0f8155;
 }
 
+.sidebar .widget_categories ul li.cat-item-4:before {
+  content: "\f5eb";
+  color: #0f8155;
+}
+
 .sidebar .widget_categories ul li a span {
   padding-right: 25px;
 }
