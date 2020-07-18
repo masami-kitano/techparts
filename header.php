@@ -19,7 +19,13 @@
                 <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="header__nav">
-                <?php wp_nav_menu(); ?>
+                <?php 
+                    if ( is_home() ) {
+                        wp_nav_menu( array( 'menu' => 'top-header-nav' ) );
+                    } else {
+                        wp_nav_menu( array( 'menu' => 'sub-header-nav' ) );
+                    }
+                ?>
             </div>
         </div>
         <div id="hamburger" class="hamburger">
