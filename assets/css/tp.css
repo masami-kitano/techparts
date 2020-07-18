@@ -278,6 +278,7 @@ a {
 }
 
 .topics-item__img {
+  position: relative;
   width: calc(100% - 25px);
   height: 200px;
   background-color: #e5e5e5;
@@ -292,6 +293,35 @@ a {
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
   border-radius: 5px;
+}
+
+.topics-item__img .post-item-cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.topics-item__img .post-item-cat span.cat-folder-icon {
+  padding-right: 5px;
+}
+
+.topics-item__img.category-programming .post-item-cat {
+  background-color: #096fc8;
+}
+
+.topics-item__img.category-design .post-item-cat {
+  background-color: #db8c6c;
+}
+
+.topics-item__img.category-direction .post-item-cat {
+  background-color: #0f8155;
 }
 
 .topics-item__title {
@@ -406,7 +436,7 @@ a {
   position: absolute;
   bottom: 10px;
   display: block;
-  width: calc(100% - 65px);
+  width: calc(100% - 40px);
   font-size: 11px;
   color: #8c8c8c;
   text-align: right;

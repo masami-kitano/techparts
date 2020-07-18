@@ -22,13 +22,20 @@ Template Name: index
 						if ($the_query->have_posts()) : ?>
 							<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 								<a href="<?php the_permalink(); ?>" class="topics-item">
-									<div class="topics-item__img">
+									<div class="topics-item__img category-<?php echo get_category_slug() ?>">
 										<?php
 											if (has_post_thumbnail() ) {
 												the_post_thumbnail('large');
 											} else {
 												echo '<img src="' . esc_url(get_template_directory_uri()) . '/assets/img/noimg.png" alt="TechPartsデフォルト画像">';
 											}
+										?>
+										<?php
+										// カテゴリー１つ目の名前を表示
+										$category = get_the_category();
+										if ($category[0] ) {
+											echo '<div class="post-item-cat"><span class="cat-folder-icon"><i class="far fa-folder"></i></span>' . $category[0]->cat_name . '</div><!-- /post-item-cat -->';
+										}
 										?>
 									</div>
 									<div class="topics-item__title">

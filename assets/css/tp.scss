@@ -302,6 +302,7 @@ a {
     }
     
     &__img {
+        position: relative;
         width: $content_w;
         height: 200px;
         background-color: #e5e5e5;
@@ -313,6 +314,31 @@ a {
             object-fit: cover;
             object-position: 50% 50%;
             border-radius: 5px;
+        }
+
+        .post-item-cat {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 5px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: #fff;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            span.cat-folder-icon {
+                padding-right: 5px;
+            }
+        }
+
+        @each $category , $color in $category-colors {
+            &.#{$category} {
+                .post-item-cat {
+                    background-color: $color;
+                }
+            }
         }
     }
 
@@ -417,7 +443,7 @@ a {
                 position: absolute;
                 bottom: 10px;
                 display: block;
-                width: calc(100% - 65px);
+                width: calc(100% - 40px);
                 font-size: 11px;
                 color: #8c8c8c;
                 text-align: right;
