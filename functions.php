@@ -107,6 +107,12 @@ function tp_widgets_init() {
 }
 add_action( 'widgets_init', 'tp_widgets_init' );
 
+// 抜粋記事の文字数制限指定
+function custom_excerpt_length( $length ) {
+	return 110;	
+}	
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 // トップページのTopics覧の投稿を任意で取得
 function topics_posts() {
 	$args = array(

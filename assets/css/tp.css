@@ -372,15 +372,15 @@ a {
 }
 
 .topics-item__img.category-programming .post-item-cat {
-  background-color: #096fc8;
+  background-color: rgba(9, 111, 200, 0.8);
 }
 
 .topics-item__img.category-design .post-item-cat {
-  background-color: #db8c6c;
+  background-color: rgba(219, 140, 108, 0.8);
 }
 
 .topics-item__img.category-direction .post-item-cat {
-  background-color: #0f8155;
+  background-color: rgba(15, 129, 85, 0.8);
 }
 
 .topics-item__img.category-programming .post-item-cat:before {
@@ -443,6 +443,10 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0 25px;
+}
+
+.post .pagenation {
+  text-align: center;
 }
 
 .post-item {
@@ -510,15 +514,15 @@ a {
 }
 
 .post-item__content__meta.category-programming .post-item-cat {
-  background-color: #096fc8;
+  background-color: rgba(9, 111, 200, 0.8);
 }
 
 .post-item__content__meta.category-design .post-item-cat {
-  background-color: #db8c6c;
+  background-color: rgba(219, 140, 108, 0.8);
 }
 
 .post-item__content__meta.category-direction .post-item-cat {
-  background-color: #0f8155;
+  background-color: rgba(15, 129, 85, 0.8);
 }
 
 .post-item__content__meta.category-programming .post-item-cat:before {

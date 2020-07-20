@@ -373,7 +373,7 @@ a {
         @each $category , $color in $category-colors {
             &.#{$category} {
                 .post-item-cat {
-                    background-color: $color;
+                    background-color: rgba($color, 0.8);
                 }
             }
         }
@@ -422,6 +422,10 @@ a {
         display: flex;
         flex-wrap: wrap;
         padding: 0 $space;
+    }
+
+    .pagenation {
+        text-align: center;
     }
 }
 
@@ -487,7 +491,7 @@ a {
             @each $category , $color in $category-colors {
                 &.#{$category} {
                     .post-item-cat {
-                        background-color: $color;
+                        background-color: rgba($color, 0.8);
                     }
                 }
             }
