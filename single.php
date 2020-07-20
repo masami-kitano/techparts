@@ -50,6 +50,16 @@
                                 </a>
                             </div>
                         <?php endif; ?>
+                        <div class="tagcloud">
+                            <?php if(has_tag()==true) : ?>
+                                <?php 
+                                    $tags = get_the_tags();
+                                    foreach( $tags as $tag) : 
+                                ?>
+                                    <a href="<?php echo get_tag_link($tag->term_id) ?>"><?php echo $tag->name ?></a>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
 
                     </div>
 

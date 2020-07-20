@@ -404,6 +404,7 @@ a {
 }
 
 .breadcrumb {
+    padding-bottom: 20px;
     font-size: 12px;
 
     a {
@@ -779,10 +780,20 @@ a {
 
 .post {
     &__header {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+
+        &__img {
+            padding-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+        }
 
         &__title {
-            padding: 20px 0;
+            padding-bottom: 20px;
             font-size: 1.7em;
             line-height: 1.4;
         }
@@ -832,6 +843,34 @@ a {
                         color: #fff;
                         background: #0f8155;
                     }
+                }
+            }
+        }
+
+        .tagcloud {
+            
+            a {
+                display: inline-block;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                border: 1px solid #B6C0C7;
+                color: #fff;
+                padding: 2px $half_s;
+                background-color: #B6C0C7;
+                border-radius: 13px;
+                font-size: 13px !important;
+
+                &::before {
+                    font-family: "Font Awesome 5 Free";
+                    content: "\f02b";
+                    font-weight: bold;
+                    padding-right: 5px;
+                    font-size: 10px;
+                }
+
+                &:hover {
+                    background-color: #fff;
+                    color: #B6C0C7
                 }
             }
         }
