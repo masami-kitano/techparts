@@ -174,3 +174,33 @@ function get_category_slug() {
 
 	return $slug;
 }
+
+// お問い合わせフォーム　Line通知
+if ( ! function_exists( 'my_send_linenotify' ) ) {
+    function my_send_linenotify( $message, $image_thumbnail = '', $image_fullsize = '' ) {
+        $url = 'https://notify-api.line.me/api/notify';
+        $token = 'DeEmqMZS1Y7YcUKuplNl1BBfVswhiAsrav4lEk01IhG';
+        $response = wp_remote_post( $url, array(
+            'method' => 'POST',
+            'headers' => array(
+                'Authorization' => 'Bearer '.$token,
+            ),
+            'body' => array(
+                'message' => $message,
+                'imageThumbnail' => $image_thumbnail,
+                'imageFullsize' => $image_fullsize,
+            ),
+        ));
+        if ( is_wp_error( $response ) ) {
+            $error_message = $response->get_error_message();
+            echo "Error: $error_message";
+        }
+    }
+}
+
+function my_wpcf7_mail_sent( $contact_form ) {
+    $message = "お問い合わせフォームが送信されました。\n";
+    $message .= "タイトル：" . $contact_form->title;
+    my_send_linenotify( $message );
+}
+add_action( 'wpcf7_mail_sent', 'my_wpcf7_mail_sent', 10, 1 );
