@@ -988,6 +988,7 @@ a {
 }
 
 .contact__wrap input.submit {
+  outline: none;
   cursor: pointer;
   display: block;
   background: #B6C0C7;
