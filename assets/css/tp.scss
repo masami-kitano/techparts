@@ -99,7 +99,7 @@ a {
 }
 
 .header {
-    margin-bottom: $double_s;
+    margin-bottom: $space;
     background-image: url(../img/header_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -848,7 +848,7 @@ a {
         }
 
         .tagcloud {
-            
+
             a {
                 display: inline-block;
                 margin-right: 5px;
