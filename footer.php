@@ -1,4 +1,8 @@
-<section class="footer">
+    <section class="footer">
+        <div id="page-top" class="top-btn">
+            <span></span>
+            <span></span>
+        </div>
        <div class="footer__wrap">
             <div class="footer__logo">
                 <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_black.png" alt="TechPartsのロゴ"></a>

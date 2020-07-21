@@ -719,6 +719,39 @@ a {
 }
 
 .footer {
+    @include tb {
+        .top-btn {
+            z-index: 500;
+            cursor: pointer;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background-color: rgba(#B6C0C7, 0.8);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+    
+            span {
+                position: absolute;
+                width: 15px;
+                height: 1px;
+                background-color: #ffffff;
+    
+                &:first-child {
+                    transform: rotate(40deg);
+                    top: 46%;
+                    left: 45%;
+                }
+
+                &:nth-child(2) {
+                    transform: rotate(-40deg);
+                    top: 46%;
+                    left: 17%;
+                }
+            }
+        }
+    }
+
     width: 100%;
     background-color: #F2F3F4;
 
@@ -815,33 +848,16 @@ a {
                 border-radius: 2px;
                 font-size: 12px;
 
-                &.category-programming {
-                    border: 1px solid #096fc8;
-                    color: #096fc8;
-
-                    &:hover {
+                @each $category , $color in $category-colors {
+                    &.#{$category} {
+                        border: 1px solid $color;
+                        background-color: $color;
                         color: #fff;
-                        background: #096fc8;
-                    }
-                }
 
-                &.category-design {
-                    border: 1px solid #db8c6c;
-                    color: #db8c6c;
-
-                    &:hover {
-                        color: #fff;
-                        background: #db8c6c;
-                    }
-                }
-
-                &.category-direction {
-                    border: 1px solid #0f8155;
-                    color: #0f8155;
-
-                    &:hover {
-                        color: #fff;
-                        background: #0f8155;
+                        &:hover {
+                            color: $color;
+                            background: #fff;
+                        }
                     }
                 }
             }
