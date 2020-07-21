@@ -953,6 +953,54 @@ a {
   font-size: 32px;
 }
 
+.contact {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+
+.contact__wrap {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  .contact__wrap {
+    width: 100%;
+  }
+}
+
+.contact__wrap h2 {
+  font-size: 30px;
+}
+
+.contact__wrap input, .contact__wrap textarea {
+  width: 100%;
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  font-size: 15px;
+}
+
+.contact__wrap textarea {
+  resize: none;
+  height: 300px;
+}
+
+.contact__wrap input.submit {
+  cursor: pointer;
+  display: block;
+  background: #B6C0C7;
+  border-radius: 50px;
+  color: #fff;
+  margin: 25px auto;
+  width: 200px;
+}
+
+.contact__wrap input.submit:hover {
+  background: #374047;
+}
+
 .error-404 {
   text-align: center;
 }

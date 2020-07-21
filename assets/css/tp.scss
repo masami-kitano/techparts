@@ -913,6 +913,57 @@ a {
 
 // archive.php end
 
+// contact.php
+
+.contact {
+    width: calc(100% - #{$double_s});
+    margin: 0 auto;
+
+    &__wrap {
+        width: calc(100% - #{$double_s});
+        margin: 0 auto;
+
+        @include sp {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        input, textarea {
+            width: 100%;
+            background-color: #f6f6f6;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem 1.5rem;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: none;
+            height: 300px;
+        }
+
+        input.submit {
+            cursor: pointer;
+            display: block;
+            background: #B6C0C7;
+            border-radius:50px;
+            color: #fff;
+            margin: $space auto;
+            width: 200px;
+
+            &:hover {
+                background: darken(#B6C0C7, 50%);
+            }
+        }
+            
+    }
+}
+
+// contact.php end
+
 // 404.php
 
 .error-404 {
