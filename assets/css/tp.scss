@@ -99,12 +99,16 @@ a {
 }
 
 .header {
-    margin-bottom: $space;
+    margin-bottom: $double_s;
     background-image: url(../img/header_bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
+
+    @include sp {
+        margin-bottom: $space;
+    }
 
     &__wrap {
         display: flex;
