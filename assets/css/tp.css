@@ -958,6 +958,12 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 599px) {
+  .contact {
+    width: 100%;
+  }
+}
+
 .contact__wrap {
   width: calc(100% - 50px);
   margin: 0 auto;

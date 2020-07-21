@@ -919,6 +919,10 @@ a {
     width: calc(100% - #{$double_s});
     margin: 0 auto;
 
+    @include sp {
+        width: 100%;
+    }
+
     &__wrap {
         width: calc(100% - #{$double_s});
         margin: 0 auto;
