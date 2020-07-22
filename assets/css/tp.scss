@@ -967,6 +967,10 @@ a {
                 background: darken(#B6C0C7, 50%);
             }
         }
+
+        input[type="submit"] {
+            -webkit-appearance: none;
+        }
             
     }
 }

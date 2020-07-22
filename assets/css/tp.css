@@ -1014,6 +1014,10 @@ a {
   background: #374047;
 }
 
+.contact__wrap input[type="submit"] {
+  -webkit-appearance: none;
+}
+
 .error-404 {
   text-align: center;
 }
