@@ -14,23 +14,32 @@
 </head>
 <body <?php body_class(); ?>>
     <section class="header">
-        <div class="header__wrap">
-            <div class="header__logo">
-                <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
+        <div class="header__bg">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
+                </div>
+                <div class="header__nav">
+                    <?php 
+                        if ( is_home() ) {
+                            wp_nav_menu( array( 'menu' => 'top-header-nav' ) );
+                        } else {
+                            wp_nav_menu( array( 'menu' => 'sub-header-nav' ) );
+                        }
+                    ?>
+                </div>
             </div>
-            <div class="header__nav">
-                <?php 
-                    if ( is_home() ) {
-                        wp_nav_menu( array( 'menu' => 'top-header-nav' ) );
-                    } else {
-                        wp_nav_menu( array( 'menu' => 'sub-header-nav' ) );
-                    }
-                ?>
+            <div id="hamburger" class="hamburger">
+                    <span class="hamburger__line hamburger__line--top"></span>
+                    <span class="hamburger__line hamburger__line--bottom"></span>
             </div>
+            <div id="black-bg" class="black-bg"></div>
         </div>
-        <div id="hamburger" class="hamburger">
-                <span class="hamburger__line hamburger__line--top"></span>
-                <span class="hamburger__line hamburger__line--bottom"></span>
+        <div class="header__cat">
+            <ul>
+                <li><a href="/category/programming" class="category-programming">プログラミング</a></li>
+                <li><a href="/category/design" class="category-design">デザイン</a></li>
+                <li><a href="/category/direction" class="category-direction">ディレクション</a></li>
+            </ul>
         </div>
-        <div id="black-bg" class="black-bg"></div>
     </section>

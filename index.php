@@ -5,7 +5,7 @@ Template Name: index
 ?>
 <?php get_header(); ?>
 <section class="main">
-        <div class="main-category">
+        <!-- <div class="main-category">
             <div class="tp-title">Main Category</div>
             <div class="main-category__wrap">
 				<a href="/category/programming/" class="three-column category-programming">
@@ -21,7 +21,8 @@ Template Name: index
 					<p>ディレクション</p>
 				</a>
             </div>
-        </div>
+		</div> -->
+		
         <div class="primary">
             <div class="inner">
                 <div id="topics" class="topics">
