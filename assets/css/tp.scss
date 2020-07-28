@@ -224,7 +224,12 @@ a {
     &__cat {
         margin: 0 auto;
         max-width: $max_w;
-        padding: 0 $half_s;
+        padding: 0 $space;
+
+        @include sp {
+            padding: 0;
+        }
+
         ul {
             display: flex;
             li {
@@ -239,6 +244,10 @@ a {
                     font-weight: bold;
                     color: #555;
 
+                    @include sp {
+                        font-size: .9rem;
+                    }
+
                     @each $category , $color in $category-colors {
                         &.#{$category} {
                             &:after {
@@ -252,6 +261,10 @@ a {
                                 height: 3px;
                                 background: $color;
                                 border-radius: 10px;
+
+                                @include sp {
+                                    width: 20px;
+                                }
                             }
 
                             &:hover {
@@ -586,6 +599,10 @@ a {
             p {
                 color: #8c8c8c;
                 font-size: 14px;
+
+                @include sp {
+                    font-size: 13px;
+                }
             }
         }
     }
