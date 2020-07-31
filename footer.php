@@ -8,9 +8,9 @@
                 <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_black.png" alt="TechPartsのロゴ"></a>
             </div>
             <div class="footer__social">
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100045425508039"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/kitano_masami"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/masami-kitano"><i class="fab fa-github"></i></a>
             </div>
             <div class="footer__copy">
                 <address>Copyright © Tech Parts All Rights Reserved.</address>
