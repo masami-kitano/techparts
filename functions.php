@@ -198,9 +198,19 @@ if ( ! function_exists( 'my_send_linenotify' ) ) {
     }
 }
 
+// Line通知連携
 function my_wpcf7_mail_sent( $contact_form ) {
     $message = "お問い合わせフォームが送信されました。\n";
     $message .= "タイトル：" . $contact_form->title;
     my_send_linenotify( $message );
 }
 add_action( 'wpcf7_mail_sent', 'my_wpcf7_mail_sent', 10, 1 );
+
+// 画像 width/height 自動割り当て機能削除
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+ 
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
