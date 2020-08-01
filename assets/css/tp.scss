@@ -610,7 +610,7 @@ a {
 
 
 .sidebar {
-    margin-top: $space;;
+    margin-top: $space;
     margin-left: auto;
     width: $three_column;
 
@@ -629,7 +629,7 @@ a {
 
         &:first-child {
             border-top: none;
-            padding-top: 0;
+            padding-top: $half_s;
         }
 
         &-title {

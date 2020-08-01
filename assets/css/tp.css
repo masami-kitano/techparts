@@ -729,7 +729,7 @@ a {
 
 .sidebar .widget:first-child {
   border-top: none;
-  padding-top: 0;
+  padding-top: 12.5px;
 }
 
 .sidebar .widget-title {
