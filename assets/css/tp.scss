@@ -378,9 +378,17 @@ a {
     flex-wrap: wrap;
 }
 
-.topics {
-    width: 100%;
+.inner {
     margin-top: $space;
+    width: calc(100% - (#{$three_column} + #{$space}));
+
+    @include tb {
+        width: 100%;
+    }
+}
+
+.topics {
+    margin-bottom: $double_s;
 
     &__wrap {
         display: none;
@@ -457,15 +465,6 @@ a {
         margin-top: $half_s;
         font-weight: 600;
         font-size: 17px;
-    }
-}
-
-.inner {
-    margin-top: $double_s;
-    width: calc(100% - (#{$three_column} + #{$space}));
-
-    @include tb {
-        width: 100%;
     }
 }
 
@@ -611,7 +610,7 @@ a {
 
 
 .sidebar {
-    margin-top: $double_s;
+    margin-top: $space;;
     margin-left: auto;
     width: $three_column;
 
@@ -628,10 +627,10 @@ a {
         border-top: 1px solid #B6C0C7;
         padding: $space 0 $double_s;
 
-        // &:first-child {
-        //     border-top: none;
-        //     padding-top: 0;
-        // }
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
 
         &-title {
             margin-bottom: $space;
