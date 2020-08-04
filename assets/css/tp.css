@@ -1330,4 +1330,21 @@ a {
   background: #fff;
   color: #B6C0C7;
 }
+
+#toc_container {
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+#toc_container.no_bullets.contracted {
+  width: 100% !important;
+}
+
+#toc_container ul {
+  line-height: 2.0;
+}
+
+#toc_container .toc_toggle a {
+  color: #096fc8;
+}
 /*# sourceMappingURL=tp.css.map */

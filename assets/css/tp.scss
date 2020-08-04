@@ -1139,6 +1139,26 @@ a {
 
 // 404.php end
 
+// 投稿 目次
+#toc_container {
+    border-radius: 10px;
+    padding: 10px 30px;
+
+    &.no_bullets.contracted {
+        width: 100%!important;
+    }
+
+    ul {
+        line-height: 2.0;
+    }
+
+    .toc_toggle {
+        a {
+            color: #096fc8;
+        }
+    }
+}
+
 
 
 
