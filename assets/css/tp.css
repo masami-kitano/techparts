@@ -1015,7 +1015,11 @@ a {
 .post article.post p {
   font-size: 15px;
   font-weight: lighter;
-  line-height: 1.8;
+  line-height: 2.0;
+}
+
+.post article.post strong {
+  font-weight: bold;
 }
 
 .post article.post img {
@@ -1069,7 +1073,11 @@ a {
 .post article.post p {
   font-size: 15px;
   font-weight: lighter;
-  line-height: 1.8;
+  line-height: 2.0;
+}
+
+.post article.post strong {
+  font-weight: bold;
 }
 
 .post article.post img {
@@ -1123,7 +1131,11 @@ a {
 .post article.post p {
   font-size: 15px;
   font-weight: lighter;
-  line-height: 1.8;
+  line-height: 2.0;
+}
+
+.post article.post strong {
+  font-weight: bold;
 }
 
 .post article.post img {
