@@ -1146,8 +1146,9 @@ a {
 
 // 投稿 目次
 #toc_container {
-    border-radius: 10px;
+    margin: 30px 0;
     padding: 10px 30px;
+    border-radius: 10px;
 
     &.no_bullets.contracted {
         width: 100%!important;
