@@ -36,33 +36,27 @@ add_action( 'init', 'tp_menu_init' );
 // css js
 function tp_enqueue_scripts() {
 	// css
-	wp_enqueue_style( 
-		'reset-style', 
-		get_template_directory_uri() . '/assets/css/reset.css', 
-		array(), '1.0.0', 'all' 
+	wp_enqueue_style(
+		'tp-style',
+		get_template_directory_uri() . '/assets/css/tp.css',
+		array(), '1.0.0', 'all'
 	);
 
-	wp_enqueue_style( 
-		'tp-style', 
-		get_template_directory_uri() . '/assets/css/tp.css', 
-		array(), '1.0.0', 'all' 
-	);
-
-	wp_enqueue_style( 
-		'main-style', 
-		get_template_directory_uri() . '/style.css', 
-		array(), '1.0.0', 'all' 
+	wp_enqueue_style(
+		'main-style',
+		get_template_directory_uri() . '/style.css',
+		array(), '1.0.0', 'all'
 	);
 
 	wp_enqueue_style(
 		'fontawesome',
 		'https://use.fontawesome.com/releases/v5.8.2/css/all.css'
 	);
-	
+
 
 	// js
-	wp_enqueue_script( 
-		'common-script', 
+	wp_enqueue_script(
+		'common-script',
 		get_template_directory_uri() . '/assets/js/tp.js',
 		array('jquery'),
 		false,
@@ -70,17 +64,17 @@ function tp_enqueue_scripts() {
 	);
 
 	/* ---------- JS分割用 ---------- */
-	
-	// if( is_front_page() ) wp_enqueue_script( 
-	// 	'home-script', 
+
+	// if( is_front_page() ) wp_enqueue_script(
+	// 	'home-script',
 	// 	get_template_directory_uri() . '/assets/js/.js',
 	// 	array( 'jquery' ),
 	// 	false,
 	//   	true
 	// );
 
-	// if ( is_page( 'menu' ) ) wp_enqueue_script( 
-	// 'menu-script', 
+	// if ( is_page( 'menu' ) ) wp_enqueue_script(
+	// 'menu-script',
 	// get_template_directory_uri() . '/assets/js/.js',
 	// array( 'jquery' ),
 	// false,
@@ -103,22 +97,22 @@ function tp_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
-	);	
+	);
 }
 add_action( 'widgets_init', 'tp_widgets_init' );
 
 // 抜粋記事の文字数制限指定
 function custom_excerpt_length( $length ) {
-	return 80;	
-}	
+	return 80;
+}
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // トップページのTopics覧の投稿を任意で取得
 function topics_posts() {
 	$args = array(
-		'post_type' => 'post', 
+		'post_type' => 'post',
 		'post__in' => array(89, 5, 7, 17, 33, 34),
-	); 
+	);
 	return $args;
 }
 
@@ -145,7 +139,7 @@ function current_archive() {
 	}
 }
 
-// the_archive_title 余計な文字を削除 
+// the_archive_title 余計な文字を削除
 add_filter( 'get_the_archive_title', function ($title) {
     if (is_category()) {
         $title = single_cat_title('',false);
@@ -170,7 +164,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 // カテゴリーのslugを取得
 function get_category_slug() {
 	$category = get_the_category();
-	$slug = $category[0]->category_nicename;  
+	$slug = $category[0]->category_nicename;
 
 	return $slug;
 }

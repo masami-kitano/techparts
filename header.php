@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/assets/img/tp.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TechParts | 小さな欠片を大きな力に</title>
+    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/reset.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/slick/slick-theme.css">
@@ -30,7 +31,7 @@
                     <a href="<?php echo home_url( '/', 'https' ); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/img/tp-logo_white.png" alt="TechPartsのロゴ"></a>
                 </div>
                 <div class="header__nav">
-                    <?php 
+                    <?php
                         if ( is_home() ) {
                             wp_nav_menu( array( 'menu' => 'top-header-nav' ) );
                         } else {
