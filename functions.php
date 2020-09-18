@@ -111,7 +111,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function topics_posts() {
 	$args = array(
 		'post_type' => 'post',
-		'post__in' => array(100, 127, 89, 5, 7, 17, 33),
+		'post__in' => array(127, 100, 89, 5, 7, 17, 33),
 	);
 	return $args;
 }
